@@ -47,7 +47,14 @@ make
 make install
 cd ../../
 
-# cp $TARGET_DIR/bin/madplay /tftpfoot/
-# cd $TARGET_DIR/lib/
-# cp libid3tag.so.0 libid3tag.so.0.3.0 libmad.so.0 libmad.so.0.2.1 /tftpfoot/
+#下载 madplay到开发板运行测试
+#把它以及依赖库下载到开发板，并作如下放置：
+#执行文件： madplay 放在 /usr/bin/目录
+scp $TARGET_DIR/bin/madplay root@192.168.3.230:/usr/bin/ 
+#库文件：libid3tag.so.0、libid3tag.so.0.3.0、libmad.so.0、libmad.so.0.2.1放在/usr/lib目录。
+scp $TARGET_DIR/lib/libz.so* root@192.168.3.230:/lib
+scp $TARGET_DIR/lib/libid3tag.so.0 libid3tag.so.0.3.0 libmad.so.0 libmad.so.0.2.1 root@192.168.3.230:/usr/lib
 
+#play it on iTop-4412:
+#cd /home/topeet/AudioCaptureWork/
+#madplay -o wav:- smile.mp3 | aplay
