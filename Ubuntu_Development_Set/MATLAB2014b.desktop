@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Matlab
+GenericName=Matlab 2014b
+Comment=MATLAB:The Language of Technical Computing
+Exec=/usr/local/MATLAB/R2014b/bin/matlab -desktop
+Icon=/usr/local/MATLAB/R2014b/toolbox/shared/dastudio/resources/MatlabIcon.png
+StartupNotify=true
+Terminal=false
+Categories=Development;Matlab;
