@@ -1,0 +1,10 @@
+update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.6.0_45/bin/javac 1
+update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.6.0_45/bin/java 1
+update-alternatives --install /usr/bin/javaws javaws /usr/lib/jvm/jdk1.6.0_45/bin/javaws 1
+update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/jdk1.6.0_45/bin/jar 1
+update-alternatives --install /usr/bin/javap javap /usr/lib/jvm/jdk1.6.0_45/bin/javap 1
+update-alternatives --config javac
+update-alternatives --config java
+update-alternatives --config javaws
+update-alternatives --config jar
+update-alternatives --config javap
