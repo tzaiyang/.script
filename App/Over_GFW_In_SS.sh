@@ -1,11 +1,16 @@
 #!/bin/bash
 #服务器端
+
+
+
 #su - root
 set -e
 
 #客户端
 #参考http://blog.csdn.net/u012810317/article/details/52139361
 sudo apt-get install shadowsocks
+sudo cp /etc/shadowsocks/config.json /etc/shadowsocks/config.json.bak
+sudo cat ../Surport/shadowsocks.json > /etc/shadowsocks/config.json
 
 #开机自启设置 
 #方案1
