@@ -1,5 +1,8 @@
 # .script
-Some scripts that I am using on my linux platform
+## This project including:  
++ Scripts used on Linux platform
++ Notes for usages of command in shell command line
++ List of software on Microsoft Windows platform 
 
 ## 开机慢的原因记录：
 Swap分区与/etc/fstab记录不一致
