@@ -1,34 +1,31 @@
 # .script
-Some script that i am using on my ubuntu16.04
- 
-./
-./Startup_App
-./Startup_App/netease-music.sh
-./Startup_App/monitors.sh
-./shadowsocks.json
-./iTop-4412-Development
-./iTop-4412-Development/tinycap_download_to_itop-4412.sh
-./iTop-4412-Development/madplay_download_to_itop-4412.sh
-./iTop-4412-Development/madplay_install_x86.sh
-./iTop-4412-Development/madplay_install_arm.sh
-./README.md
-./Ubuntu_Development_Set
-./Ubuntu_Development_Set/caffe_install.sh
-./Ubuntu_Development_Set/Sublime_Text3_Chinese_Input_Set.sh
-./Ubuntu_Development_Set/Preferences.sublime-settings
-./Ubuntu_Development_Set/Sublime_Text3_Install.sh
-./Ubuntu_Development_Set/opencv_install.sh
-./Ubuntu_Development_Set/MATLAB2014b.desktop
-./Ubuntu_Development_Set/MATLAB2014b_Install.sh
-./Ubuntu_App_Set
-./Ubuntu_App_Set/youdao-dict_install.sh
-./Ubuntu_App_Set/Apport_stop.sh
-./Ubuntu_App_Set/NVIDIA_Driver_install.sh
-./Ubuntu_App_Set/netease-cloud-music_install.sh
-./Ubuntu_App_Set/Mac_Theme_Install.sh
-./Ubuntu_App_Set/Mac_Theme_Uninstall.sh
+Some scripts that I am using on my linux platform
 
-开机慢的原因记录：
-1. Swap分区与/etc/fstab记录不一致
-(查看swap uuid:sudo blkid)
+## 开机慢的原因记录：
+Swap分区与/etc/fstab记录不一致
+### 查看swap uuid:
+> sudo blkid
 
+## 查找目录下的所有文件中是否含有某个字符串 
+> find .|xargs grep -ri "IBM"  
+> find .|xargs grep -ri "IBM" -l (只打印出文件名) 
+
+## 查看文件编码方式
+> file filename
+
+## Uncompress
++ .tar.gz  	tar -zXVf xx.tar.gz -C /tmp
++ .tar.bz2      tar -xjvf xx.tar.bz2 -C /tmp
++ .zip          unzip -O cp936 xx.zip (unzip解压缩中文乱码解决方案)
+
+## Default Environment Set
+python version set
+> sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 100  
+> sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 150  
+> python -V  
+> sudo update-alternatives --config python (switch python version)  
+> sudo update-alternatives --config editor (Nano To Vim)  
+> sudo update-alternatives --config java (switch java version)  
+
+## Find the program place
+> which vim (program name)
