@@ -5,6 +5,9 @@
 cd /usr/share/icons/mac-cursors && sudo ./uninstall-mac-cursors.sh
 sudo apt-get remove macbuntu-os-icons-lts-v7 macbuntu-os-ithemes-lts-v7
 
+#4.To Uninstall albert
+sudo apt-get remove albert
+
 #5.Use these commands to remove Plank dock themes from your system:
 sudo apt-get autoremove plank macbuntu-os-plank-theme-lts-v7
 
