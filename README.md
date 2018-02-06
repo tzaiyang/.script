@@ -32,3 +32,7 @@ python version set
 
 ## Find the program place
 > which vim (program name)
+
+## Rsync (remote sync)
+
+## gpg (encryption signature)
