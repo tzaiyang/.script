@@ -2,7 +2,7 @@
  "server":"zyant.me",
  "server_port":8991,
  "local_port":1080,
- "password":"536809@shadowsocks",
+ "password":"120827",
  "timeout":600,
  "method":"aes-256-cfb"
 }
