@@ -33,6 +33,20 @@ python version set
 ## Find the program place
 > which vim (program name)
 
+## View the Desktop enviorment
+> echo $DESKTOP\_SESSION  
+> echo $GDMSESSION  
+> env | grep DESKTOP\_SESSION=  
+
+## View the kernel version
+> cat /proc/version
+
+## View the release version of Linux
+> lsb\_release -a  
+> cat /etc/issue  
+> cat /etc/lsb-release  
+> cat /etc/os-release
+
 ## Rsync (remote sync)
 
 ## gpg (encryption signature)
