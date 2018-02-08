@@ -15,7 +15,7 @@ sudo apt-get install vim
 ./Over_GFW_In_SS.sh
 
 #Sublime_Text3
-../Development/Sublime_Text3_Install.sh
+#../Development/Sublime_Text3_Install.sh
 
 #Youdao Dictionary
 ./Youdao_Dict_Install.sh
