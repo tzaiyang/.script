@@ -45,5 +45,5 @@ export PATH=/usr/local/MATLAB/R2014b/bin:$PATH
 source /etc/profile
 
 #设置桌面快捷方式
-echo $(cat MATLAB2014b.desktop) >> /usr/share/applications/Matlab_R2014b.desktop
+sudo cat ../Surport/MATLAB2014b.desktop >> /usr/share/applications/Matlab_R2014b.desktop
 
