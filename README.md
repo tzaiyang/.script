@@ -45,7 +45,7 @@ python version set
 > lsb\_release -a  
 > cat /etc/issue  
 > cat /etc/lsb-release  
-> cat /etc/os-release
+> cat /etc/os-release  
 
 ## Rsync (remote sync)
 
@@ -53,9 +53,9 @@ python version set
 
 ## X11(Xorg) WindowManager(WM) Desktop Enviorment(DE)
 ### Comand Line -> DE
-> startx
+> startx  
 ### Comand Line -> Xorg(Xserver)
-> xinit
+> xinit  
 ### Comand Line -> DE(Gnome)
 > xinit  
 > gnome-session(start WM)  
