@@ -2,6 +2,9 @@
 
 #先进入命令行模式CTRL+ALT+F1
 #禁用X桌面服务
+sudo apt-get remove nvidia-*
+sudo apt-get autoremove
+
 sudo service lightdm stop
 #禁用nouveau驱动。ubuntu默认使用自带的nouveau驱动，在安装NVIDIA驱动前，要先禁止nouveau驱动
 #view the permission of file
