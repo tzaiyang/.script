@@ -1,7 +1,7 @@
 /**
  * genpac 2.0.1 https://github.com/JinnLynn/genpac
- * Generated: 2018-02-07 21:38:06
- * GFWList Last-Modified: 2018-01-21 09:23:59
+ * Generated: 2018-02-28 19:29:01
+ * GFWList Last-Modified: 2018-02-17 16:34:12
  * GFWList From: online[https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt]
  */
 
@@ -436,6 +436,7 @@ var rules = [
             "authorizeddns.org", 
             "authorizeddns.us", 
             "autodraw.com", 
+            "av.com", 
             "av.movie", 
             "avaaz.org", 
             "avbody.tv", 
@@ -3910,6 +3911,7 @@ var rules = [
             "sherabgyaltsen.com", 
             "shiatv.net", 
             "shicheng.org", 
+            "shiksha.com", 
             "shinychan.com", 
             "shipcamouflage.com", 
             "shireyishunjian.com", 
@@ -4496,6 +4498,7 @@ var rules = [
             "tubeislam.com", 
             "tubestack.com", 
             "tubewolf.com", 
+            "tuibeitu.net", 
             "tuidang.net", 
             "tuidang.org", 
             "tuidang.se", 
@@ -4971,7 +4974,6 @@ var rules = [
             "winwhispers.info", 
             "wiredbytes.com", 
             "wiredpen.com", 
-            "wireshark.org", 
             "wisdompubs.org", 
             "wisevid.com", 
             "wistia.com", 
@@ -5238,6 +5240,7 @@ var rules = [
             "zim.vn", 
             "zinio.com", 
             "ziporn.com", 
+            "zippyshare.com", 
             "zkaip.com", 
             "zkiz.com", 
             "zmw.cn", 
