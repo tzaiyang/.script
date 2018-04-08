@@ -1,8 +1,8 @@
 #!/bin/bash
 #服务器端
 #从DigitOcean买San Francisco的$5/mon的服务器,装CentOS6.9x64系统,创建成功后,root密码会发到账号邮箱.
-# tzaiyang@126.com账号下:root@104.236.178.238  120825@ryan
-# com.tzaiyang@gmail.com账号下:root@159.89.147.70 120825@ryan
+# tzaiyang账号下:104.236.178.238
+# com.tzaiyang账号下:159.89.147.70
 
 #su -root
 # wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh
