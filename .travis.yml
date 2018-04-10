@@ -1,11 +1,17 @@
 language: shell
 install: true 
 script: 
-- App/Wubi_InputMethod_Install.sh
-- App/StarDict_Install.sh
+# - App/Wubi_InputMethod_Install.sh
+# - App/StarDict_Install.sh
+# - App/Over_GFW_In_SS_Server.sh
+- App/Over_GFW_In_SS_Client.sh
+- Development/TeamViewer_Install.sh
+- echo y|Development/BeyondCompare_Install.sh
+
 sudo: enabled
 os: linux
 group: stable
-dist: trusty
+#dist: trusty
+dist: xenial
 
 

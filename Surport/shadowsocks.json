@@ -1,8 +1,8 @@
 {
- "server":"zyant.me",
- "server_port":8991,
+ "server":"Your Server IP",
+ "server_port":Your Server Com,
  "local_port":1080,
- "password":"120827",
+ "password":"Your password",
  "timeout":600,
  "method":"aes-256-cfb"
 }

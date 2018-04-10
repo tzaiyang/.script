@@ -10,7 +10,6 @@
 # sudo dpkg -i libx264-142_0.142.2431+gita5831aa-1+b2_amd64.deb
 # sudo dpkg -i gstreamer0.10-plugins-ugly_0.10.19-2.1_amd64.deb
 
-
 #youdao-dict install
 wget -P $DownloadAddress http://codown.youdao.com/cidian/linux/youdao-dict_1.1.0-0-ubuntu_amd64.deb
 cd $DownloadAddress

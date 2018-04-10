@@ -1,0 +1,10 @@
+{
+    "server":"0.0.0.0",
+    "server_port":your_server_port,
+    "local_address":"127.0.0.1",
+    "local_port":1080,
+    "password":"your_password",
+    "timeout":300,
+    "method":"AES-256-CFB",
+    "fast_open": false
+}
