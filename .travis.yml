@@ -1,6 +1,11 @@
 language: shell
-
 install: true 
+script: 
+- App/Wubi_InputMethod_Install.sh
+- App/StarDict_Install.sh
+sudo: enabled
+os: linux
+group: stable
+dist: trusty
 
-script: sudo App/Wubi_InputMethod_Install.sh
 

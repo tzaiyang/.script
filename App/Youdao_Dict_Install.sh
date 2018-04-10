@@ -1,7 +1,5 @@
 #!/bin/bash
-
-HOME_DIR=$PWD
-
+. Surport/Default_Varible.sh
 #dependence download and install
 # wget -P ~/Downloads http://ftp.br.debian.org/debian/pool/main/libs/libsidplay/libsidplay1_1.36.59-6_amd64.deb
 # wget -P ~/Downloads http://ftp.br.debian.org/debian/pool/main/x/x264/libx264-142_0.142.2431+gita5831aa-1+b2_amd64.deb
@@ -14,14 +12,12 @@ HOME_DIR=$PWD
 
 
 #youdao-dict install
-wget -P /tmp http://codown.youdao.com/cidian/linux/youdao-dict_1.1.0-0-ubuntu_amd64.deb
-cd /tmp
+wget -P $DownloadAddress http://codown.youdao.com/cidian/linux/youdao-dict_1.1.0-0-ubuntu_amd64.deb
+cd $DownloadAddress
 
 sudo dpkg -i youdao-dict_1.1.0-0-ubuntu_amd64.deb
 sudo apt-get -f install
-sudo dpkg -i youdao-dict_1.1.0-0-ubuntu_amd64.deb
+#sudo dpkg -i youdao-dict_1.1.0-0-ubuntu_amd64.deb
 
 #delete the install package
-rm *deb
-
-cd HOME_DIR
+#rm *deb
