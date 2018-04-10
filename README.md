@@ -30,8 +30,13 @@ Configure files to surport below all function in this project.
 > sudo apt-get install git  
 > sudo git clone https://github.com/tzaiyang/.script.git $HOME/.script
 
+## Instruction For Using
+After installing, go to $HOME/.script path,and run these scripts.
+
 ## Default options
 + Software download address
-> $HOME/download  
+> $HOME/Downloads
++ Execution directory
+> $HOME/.script
 
 Note:You can update these option from Surport/Default_Varible.sh

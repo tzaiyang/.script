@@ -1,2 +1,2 @@
-DownloadAddress="$HOME/download"
+DownloadAddress="$HOME/Downloads"
 EXE_DIR="$HOME/.script"
