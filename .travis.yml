@@ -2,5 +2,5 @@ language: shell
 
 install: true 
 
-script: true
+script: sudo App/Wubi_InputMethod_Install.sh
 
