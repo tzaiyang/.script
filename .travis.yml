@@ -1,12 +1,13 @@
 language: shell
-install: true 
+install: travis_wait maven install
 script: 
 # - App/Wubi_InputMethod_Install.sh
 # - App/StarDict_Install.sh
 # - App/Over_GFW_In_SS_Server.sh
-- App/Over_GFW_In_SS_Client.sh
-- Development/TeamViewer_Install.sh
-- echo y|Development/BeyondCompare_Install.sh
+# - App/Google_Chrome_Install.sh
+# - App/Over_GFW_In_SS_Client.sh
+# - Development/TeamViewer_Install.sh
+# - echo y|Development/BeyondCompare_Install.sh
 
 sudo: enabled
 os: linux
