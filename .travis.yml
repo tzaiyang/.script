@@ -1,5 +1,5 @@
 language: shell
-install: travis_wait maven install
+install: true
 script: 
 # - App/Wubi_InputMethod_Install.sh
 # - App/StarDict_Install.sh
@@ -9,10 +9,11 @@ script:
 # - Development/TeamViewer_Install.sh
 # - echo y|Development/BeyondCompare_Install.sh
 
+
 sudo: enabled
 os: linux
 group: stable
-#dist: trusty
-dist: xenial
+dist: trusty
+#dist: xenial
 
 

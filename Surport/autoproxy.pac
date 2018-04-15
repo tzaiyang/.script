@@ -1,7 +1,7 @@
 /**
  * genpac 2.0.1 https://github.com/JinnLynn/genpac
- * Generated: 2018-04-08 09:49:05
- * GFWList Last-Modified: 2018-03-27 22:59:00
+ * Generated: 2018-04-15 20:32:14
+ * GFWList Last-Modified: 2018-04-09 12:19:42
  * GFWList From: online[https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt]
  */
 
@@ -38,6 +38,7 @@ var rules = [
             "iner.gov.tw", 
             "ip.cn", 
             "jike.com", 
+            "jpush.cn", 
             "khm.googleapis.com", 
             "khm0.googleapis.com", 
             "khm1.googleapis.com", 
@@ -373,6 +374,7 @@ var rules = [
             "aolnews.com", 
             "aomiwang.com", 
             "ap.org", 
+            "apartments.com", 
             "apetube.com", 
             "api.ai", 
             "apiary.io", 
@@ -551,6 +553,7 @@ var rules = [
             "bigsound.org", 
             "biliworld.com", 
             "billypan.com", 
+            "binance.com", 
             "bing.com", 
             "binux.me", 
             "binwang.me", 
@@ -558,6 +561,7 @@ var rules = [
             "bit.do", 
             "bit.ly", 
             "bitcointalk.org", 
+            "bitfinex.com", 
             "bitmex.com", 
             "bitshare.com", 
             "bitsnoop.com", 
@@ -725,6 +729,7 @@ var rules = [
             "casinoriva.com", 
             "castbox.fm", 
             "catch22.net", 
+            "catchgod.com", 
             "catfightpayperview.xxx", 
             "catholic.org.hk", 
             "catholic.org.tw", 
@@ -2187,6 +2192,7 @@ var rules = [
             "himemix.com", 
             "himemix.net", 
             "hinet.net", 
+            "hitbtc.com", 
             "hitomi.la", 
             "hiwifi.com", 
             "hizb-ut-tahrir.info", 
@@ -2779,6 +2785,7 @@ var rules = [
             "liuxiaobo.net", 
             "liuxiaotong.com", 
             "live.com", 
+            "livecoin.net", 
             "livedoor.jp", 
             "liveleak.com", 
             "livestation.com", 
@@ -3331,6 +3338,7 @@ var rules = [
             "oizoblog.com", 
             "ok.ru", 
             "okayfreedom.com", 
+            "okex.com", 
             "okk.tw", 
             "olabloga.pl", 
             "old-cat.net", 
@@ -4830,6 +4838,7 @@ var rules = [
             "vpndada.com", 
             "vpnfan.com", 
             "vpnfire.com", 
+            "vpnfires.biz", 
             "vpnforgame.net", 
             "vpngate.jp", 
             "vpngate.net", 
@@ -5221,6 +5230,7 @@ var rules = [
             "zaozon.com", 
             "zapto.org", 
             "zattoo.com", 
+            "zb.com", 
             "zdnet.com.tw", 
             "zello.com", 
             "zengjinyan.org", 
