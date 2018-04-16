@@ -20,7 +20,7 @@
 
 
 ### Create python3-tensorflow from tensorflow/tensorflow:latest-gpu image
-> nvidia-docker run -ti -d --name tf-py3 tensorflow/tensorflow:latest-gpu bash
+> nvidia-docker run -ti -v /home/tzaiyang:/home/tzaiyang --name tf-py3 tensorflow:gpu-py3 bash
 ### Run the python3-tensorflow
 > nvidia-docker exec -ti tf-py3 bash
 

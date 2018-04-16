@@ -14,7 +14,7 @@ function Docker_Install {
     $(lsb_release -cs) \
     stable"
   sudo apt-get update
-  sudo apt-get install docker-ce
+  sudo apt-get inshttps://github.com/tall docker-ce
   sudo docker run hello-world
 }
 
@@ -47,8 +47,17 @@ function Add_Tensorflow_Image {
   nvidia-docker run -it -p 8888:8888 tensorflow/tensorflow:latest-gpu
 }
 
+function Add_Caffe_Image {
+  sudo docker run -ti bvlc/caffe:cpu caffe --version
+}
+
 function main {
   Docker_Install
-  NVIDIA-DOCKER_INSTALL
-  Add_Tensorflow_Image
+  Add_Caffe_Image
+  #sudo docker run -ti --name caffe_cpu bvlc/caffe:cpu bash
 }
+
+main
+
+
+
