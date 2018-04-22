@@ -28,7 +28,7 @@ function Set_Startup {
     sudo cat Surport/supervisord.conf >> /etc/supervisor/supervisord.conf
     sudo service supervisor restart
     # Add "service supervisor start" to above "exit 0"
-    sed -i -e 's|exit\ 0|service\ supervisor\ start\nexit\ 0|' /etc/rc.local
+    sed -i '$i\service supervisor start' /etc/rc.local
 }
 
 function Set_Proxy {
