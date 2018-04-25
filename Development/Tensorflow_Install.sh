@@ -67,6 +67,28 @@ function UninstallTensorflow {
   fi
 }
 
+# 
+function NVIDIA_Install {
+   wget -P Downloads/ http://us.download.nvidia.com/XFree86/Linux-x86_64/390.48/NVIDIA-Linux-x86_64-390.48.run
+
+}
+
+# Cuda9.1
+# Before installing the CUDA Toolkit on Linux, please ensure that you have the latest NVIDIA driver R390 installed. The latest NVIDIA R390 driver is available at: www.nvidia.com/drivers
+# Refrence:https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=debnetwork
+function Cuda_Install {
+   #sudo wget -P Downloads/ http://developer.download.nvidia.com/compute/cuda/9.1/secure/Prod/local_installers/cuda-repo-ubuntu1604-9-1-local_9.1.85-1_amd64.deb?0aOxKWselF-nL5tViJec2jToKbP1Lym9bgh4okOOWS7TzNsRQEqX3nNHj-smUb5xRHpC7gICF5J40b5axkxgFUI8XmeJLcd0naexgIJiIIWvctRr881mi8SzOIuD2LFSq8HD0DqvSvtFW2VsxY0ET7_502HS68YAfL3vlGtz0N1_ePA70ZJvbZpqFmeY__Zvzkqd40XAssTEEWPIHeE
+   sudo wget -P $HOME/Downloads/ http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
+   cd $HOME/Downloads
+  #  sudo dpkg -i cuda-repo-ubuntu1604-9-1-local_9.1.85-1_amd64.deb
+  #  sudo apt-key add /var/cuda-repo-ubuntu1604-9-1-local_9.1.85-1_amd64/7fa2af80.pub
+   sudo dpkg -i cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
+   sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
+   sudo apt-get update
+   sudo apt-get install cuda
+   cd $HOME/.script
+}
+
 function main {
   python -V
   pip -V
