@@ -1,6 +1,8 @@
 # Creating tensorflow enviorment with python3
 FROM ubuntu
 
+MAINTAINER tzaiyang
+
 # install python3 and pip3
 ARG DEBIAN_FRONTEND=noninteractive 
 RUN apt-get update&&apt-get install -y --assume-yes apt-utils python3-pip python3-dev vim
