@@ -67,13 +67,34 @@ function UninstallTensorflow {
   fi
 }
 
-# 
-function NVIDIA_Install {
-   wget -P Downloads/ http://us.download.nvidia.com/XFree86/Linux-x86_64/390.48/NVIDIA-Linux-x86_64-390.48.run
-
+# cuDNN install
+# https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html
+function CuDNN_Install {
+   # login with AIWAC2018@163.com/Epic2018
+   wget -P $HOME/Downloads/ https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.1.3/prod/9.1_20180414/cudnn-9.1-linux-x64-v7.1
+   cd $HOME/Downloads
+   tar -xzvf cudnn-9.1-linux-x64-v7.1.tgz
+   sudo cp cuda/include/cudnn.h /usr/local/cuda/include
+   sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+   sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+   
+   # To verify that cuDNN is installed and is running properly, compile the mnistCUDNN sample located in the /usr/src/cudnn_samples_v7 directory in the debian file.
+   # Copy the cuDNN sample to a writable path.
+   cp -r /usr/src/cudnn_samples_v7/ $HOME
+   # Go to the writable path.
+   cd  $HOME/cudnn_samples_v7/mnistCUDNN
+   # Compile the mnistCUDNN sample.
+   # make clean && make
+   # Run the mnistCUDNN sample.
+   ./mnistCUDNN
+   # If cuDNN is properly installed and running on your Linux system, you will see a message similar to the following:
+   # Test passed!
 }
 
 # Cuda9.1
+# NVIDIA graphics driver R375 or newer for CUDA 8
+# NVIDIA graphics driver R384 or newer for CUDA 9
+# NVIDIA graphics driver R390 or newer for CUDA 9.1
 # Before installing the CUDA Toolkit on Linux, please ensure that you have the latest NVIDIA driver R390 installed. The latest NVIDIA R390 driver is available at: www.nvidia.com/drivers
 # Refrence:https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=debnetwork
 function Cuda_Install {
