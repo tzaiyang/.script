@@ -8,3 +8,5 @@ sudo mkfs -t ext4 /dev/sdb1
 sudo mkdir -p /mnt/newhome/
 sudo mount -t ext4 -o rw /dev/sdb1 /mnt/newhome/
 rsync -aXS --exclude='/*/.gvfs' /home/. /mnt/newhome/.
+
+sudo echo "/dev/sdb1 /home/datasets/ ext4 defaults 0 0" >> /etc/fstab
