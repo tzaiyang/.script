@@ -1,4 +1,12 @@
 #!/bin/bash 
+### Note version number compatibility###
+### NVIDIA Driver 390
+### Cuda 9.0
+### Cudnn 7.05 for Cuda 9.0
+### Tensorflow 1.7.0
+### Note version number compatibility###
+
+# Tensorflow Install Refrence:https://www.tensorflow.org/install/install_linux
 set -e
 
 PYTHON_VERSION="2.7" # 2.7/3.n
@@ -67,47 +75,36 @@ function UninstallTensorflow {
   fi
 }
 
-# cuDNN install
-# https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html
+# cuDNN install v7.05
+# Install Refrence:https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html
 function CuDNN_Install {
-   # login with AIWAC2018@163.com/Epic2018
-   wget -P $HOME/Downloads/ https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.1.3/prod/9.1_20180414/cudnn-9.1-linux-x64-v7.1
+   # login with AIWAC2018@163.com/Epic2012
+   wget -P $HOME/Downloads/ http://developer.download.nvidia.com/compute/machine-learning/cudnn/secure/v7.0.5/prod/9.0_20171129/cudnn-9.0-linux-x64-v7.tgz?xRBfZEkkotfHAS07dPztYSSM9RYackMq1LUBb6Myd35UbmtXY81lRZCf0CohUjwYLRBk62Y4QrlF5NsIVvQZIXxB961LTSv81KJUSNE4yPn58CzEoYu_btLeIdTThUJQGCpKnQcAIjSi9KH8hXHdf2loKGLG1HRkC89LBl4J288YLx7eLAHMeIQnFVP1O1_ZrB4suM2TkkE
    cd $HOME/Downloads
-   tar -xzvf cudnn-9.1-linux-x64-v7.1.tgz
+   tar -xzvf cudnn-9.0-linux-x64-v7.tgz
    sudo cp cuda/include/cudnn.h /usr/local/cuda/include
    sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
    sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
-   
-   # To verify that cuDNN is installed and is running properly, compile the mnistCUDNN sample located in the /usr/src/cudnn_samples_v7 directory in the debian file.
-   # Copy the cuDNN sample to a writable path.
-   cp -r /usr/src/cudnn_samples_v7/ $HOME
-   # Go to the writable path.
-   cd  $HOME/cudnn_samples_v7/mnistCUDNN
-   # Compile the mnistCUDNN sample.
-   # make clean && make
-   # Run the mnistCUDNN sample.
-   ./mnistCUDNN
-   # If cuDNN is properly installed and running on your Linux system, you will see a message similar to the following:
-   # Test passed!
+
+   # view the version
+   cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
 }
 
-# Cuda9.1
+# Cuda9.0
 # NVIDIA graphics driver R375 or newer for CUDA 8
 # NVIDIA graphics driver R384 or newer for CUDA 9
 # NVIDIA graphics driver R390 or newer for CUDA 9.1
 # Before installing the CUDA Toolkit on Linux, please ensure that you have the latest NVIDIA driver R390 installed. The latest NVIDIA R390 driver is available at: www.nvidia.com/drivers
-# Refrence:https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=debnetwork
+# Install Refrence:https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=deblocal
 function Cuda_Install {
-   #sudo wget -P Downloads/ http://developer.download.nvidia.com/compute/cuda/9.1/secure/Prod/local_installers/cuda-repo-ubuntu1604-9-1-local_9.1.85-1_amd64.deb?0aOxKWselF-nL5tViJec2jToKbP1Lym9bgh4okOOWS7TzNsRQEqX3nNHj-smUb5xRHpC7gICF5J40b5axkxgFUI8XmeJLcd0naexgIJiIIWvctRr881mi8SzOIuD2LFSq8HD0DqvSvtFW2VsxY0ET7_502HS68YAfL3vlGtz0N1_ePA70ZJvbZpqFmeY__Zvzkqd40XAssTEEWPIHeE
-   sudo wget -P $HOME/Downloads/ http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
-   cd $HOME/Downloads
-  #  sudo dpkg -i cuda-repo-ubuntu1604-9-1-local_9.1.85-1_amd64.deb
-  #  sudo apt-key add /var/cuda-repo-ubuntu1604-9-1-local_9.1.85-1_amd64/7fa2af80.pub
-   sudo dpkg -i cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
-   sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
+   sudo wget -P $HOME/Downloads http://developer.download.nvidia.com/compute/cuda/9.0/secure/Prod/local_installers/cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb?Ad1gg_9ofZ07K9IP569l-wOS3xeLrmVhjVpZMtNUFoPwfDaWfpTnii1qGbR7oxfFv9Ir-qVIOwkPZgvUVrNSxlVtSPJ4Dh2JeklLJFk2heiYHr-EKVOAqkxnNsqqJKwH-HxcTUhsmNJpSY-0koCtYTuSsfM8rFLzVTa_zF5o2L8A-jEwneWYsGpW_MjfqRdRY7NJODaLrxVv7B6qrjZ3
+   sudo dpkg -i cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb
+   sudo apt-key add /var/cuda-repo-9-0-local/7fa2af80.pub
    sudo apt-get update
-   sudo apt-get install cuda
-   cd $HOME/.script
+   sudo apt-get install cuda-libraries-9-0
+
+   # view the version
+   cat /usr/local/cuda/version.txt
 }
 
 function main {
