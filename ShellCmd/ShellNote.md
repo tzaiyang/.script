@@ -7,35 +7,6 @@ Swap分区与/etc/fstab记录不一致
 > find .|xargs grep -ri "IBM"  
 > find .|xargs grep -ri "IBM" -l (只打印出文件名) 
 
-## 查看文件编码方式
-> file filename
-
-## Default Environment Set
-python version set
-> sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 100  
-> sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 150  
-> python -V  
-> sudo update-alternatives --config python (switch python version)  
-> sudo update-alternatives --config editor (Nano To Vim)  
-> sudo update-alternatives --config java (switch java version)  
-
-## Find the program place
-> which vim (program name)
-
-## View the Desktop enviorment
-> echo $DESKTOP\_SESSION  
-> echo $GDMSESSION  
-> env | grep DESKTOP\_SESSION=  
-
-## View the kernel version
-> cat /proc/version
-
-## View the release version of Linux
-> lsb\_release -a  
-> cat /etc/issue  
-> cat /etc/lsb-release  
-> cat /etc/os-release  
-
 ## Rsync (remote sync)
 
 ## gpg (encryption signature)
