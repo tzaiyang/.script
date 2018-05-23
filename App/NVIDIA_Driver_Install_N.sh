@@ -23,12 +23,19 @@ sudo chmod 644 /etc/modprobe.d/blacklist.conf
 sudo update-initramfs -u
 reboot
 
+
+
+
+
+
+
+
 #confirm the nouveau has been disabled
 lsmod |grep nouveau
 #install the NVIDIA driver from ppa
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt-get update
-sudo apt-get install nvidia-381
+sudo apt-get install nvidia-390
 
 #Important!!!,Disable Secure Boot from BIOS
 

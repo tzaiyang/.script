@@ -19,5 +19,5 @@
 ## view users
 > who
 ## logout user
-> w
+> w  
 > pkill -kill -t pts/2

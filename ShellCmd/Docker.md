@@ -7,15 +7,15 @@
 ### Log out and log back in so that your group membership is re-evaluated.
 
 ### Download ubuntu image
-> docker search ubuntu
-> docker pull ubuntu
-> docker images
+> docker search ubuntu  
+> docker pull ubuntu  
+> docker images  
 ### Download tensorflow image
 ### with CPU ONLY
-> docker run -it tensorflow/tensorflow bash
+> docker run -it tensorflow/tensorflow bash  
 > docker run -it -p 8888:8888 tensorflow/tensorflow
 ### with NVIDIA GPU
-> nvidia-docker run -it tensorflow/tensorflow:latest-gpu bash
+> nvidia-docker run -it tensorflow/tensorflow:latest-gpu bash  
 > nvidia-docker run -it -p 8888:8888 tensorflow/tensorflow:latest-gpu 
 
 
@@ -25,5 +25,5 @@
 > nvidia-docker exec -ti tf-py3 bash
 
 ### Commit your image from changed container
-> nvidia-docker commit python3-tensorflow tensorflow:gpu-python3
+> nvidia-docker commit python3-tensorflow tensorflow:gpu-python3  
 > docker ps -a
