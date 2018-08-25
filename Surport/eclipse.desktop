@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Eclipse
+Exec=/home/ansel/eclipse/jee-photon/eclipse/eclipse
+Terminal=false
+Icon=/home/ansel/eclipse/jee-photon/eclipse/icon.xpm
+Comment=Integrated Development Environment
+Categories=Development;IDE;
