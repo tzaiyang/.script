@@ -45,11 +45,11 @@ function Set_system_language_to_English {
 }
 function main {
     Install_Fcitx_Wbpy
-    Install_Simple_Chinese
-    Set_system_language_to_Chinese
-    # Changes take effect only after a fresh login.
-    # Configuring Fcitx to add Wbpy input method.
-    # Fcitx-config-gtk3
-    Set_system_language_to_English
+#    Install_Simple_Chinese
+#    Set_system_language_to_Chinese
+#    # Changes take effect only after a fresh login.
+#    # Configuring Fcitx to add Wbpy input method.
+#    # Fcitx-config-gtk3
+#    Set_system_language_to_English
 }
 main
