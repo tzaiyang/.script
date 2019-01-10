@@ -1,22 +1,24 @@
 #!/bin/bash
+# add to startup（autorun)
+# setsid sshPortForwarding.sh(nohup sshPortForwarding.sh&) #daemon running
 # target host(private ip)
-serverUser = root
-serverIP = 1.1.1.1 
-ForwardingPort = 7001
-rsa = ~/.ssh/id_rsa
+serverUser=admin
+serverIP=yourip
+ForwardingPort=7002
+rsa=~/.ssh/id_rsa
 exit=1
 
 while test $exit -eq 1
 do
-        if test $(ps | grep -c 'ssh.*-o StrictHostKeyChecking=no') -eq 1;then
-            ssh -o StrictHostKeyChecking=no \  
-            -o TCPKeepAlive=yes \  
-            -o ServerAliveInterval=300 \  
-            -o ServerAliveCountMax=2  \  
-            -i $(rsa)  \  
-            -C -f -N -R $(ForwardingPort):127.0.0.1:22 $(serverUser)@$(serverIP)
-        fi
-        sleep 60
+if test $(ps -ef| grep -c 'StrictHostKeyChecking=no') -lt 2; then  
+        ssh -o StrictHostKeyChecking=no \
+            -o TCPKeepAlive=yes \
+            -o ServerAliveInterval=300 \
+            -o ServerAliveCountMax=2  \
+            -i ${rsa}  \
+            -C -f -N -R ${ForwardingPort}:127.0.0.1:22 ${serverUser}@${serverIP}
+fi
+sleep 60s
 done
 
 
