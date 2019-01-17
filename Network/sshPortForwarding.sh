@@ -36,7 +36,7 @@ done
 #!/bin/bash -e 
 
 # #log
-# exec 2 > /tmp/rc.local.log
+# exec 2> /tmp/rc.local.log
 # exec 1>&2 
 # set -x 
 
