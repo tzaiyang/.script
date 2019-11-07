@@ -4,6 +4,10 @@ pipeline {
         stage('build') {
             steps {
                 sh 'mvn --version'
+                sh '''
+                    apt-get update
+                    apt-get install sudo
+                '''
                 sh 'Development/Blockchain/docker.sh'
             }
         }

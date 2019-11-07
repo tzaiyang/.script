@@ -1,14 +1,14 @@
 #!/bin/bash
 set -e
-set -x 
+set -x
 
 function Docker_Install {
   echo 'Installing Docker'
-  sudo apt-get update 
-  sudo apt-get install \
-  apt-transport-https \
+  sudo apt-get update
+  sudo apt-get install -y --no-install-recommends \
   ca-certificates \
   curl \
+  gnupg2 \
   software-properties-common
   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   sudo apt-key fingerprint 0EBFCD88
@@ -22,19 +22,25 @@ function Docker_Install {
 }
 
 function Docker_Install_v1 {
-  # only for linux client  
+  # only for linux client
   echo 'Installing Docker'
+  sudo apt-get update
+  sudo apt-get install -y --no-install-recommends\
+  apt-transport-https \
+  ca-certificates \
+  curl \
+  software-properties-common
   curl -fsSL https://get.docker.com | sudo bash
 }
 
 function Docker_Uninstall_v1 {
-  # uninstall 
+  # uninstall
   sudo apt-get purge docker-ce
-  sudo rm -rf /var/lib/docker 
+  sudo rm -rf /var/lib/docker
 }
 
 function Add_Docker_UserGroup {
-    echo 'Add Docker User group' 
+    echo 'Add Docker User group'
     sudo groupadd docker
     sudo usermod -aG docker $USER
 }
@@ -74,8 +80,10 @@ function Add_Tensorflow_Image {
 
 function main {
   Docker_Install_v1
+  Add_Docker_UserGroup
   NVIDIA-DOCKER_INSTALL_v1
   # Add_Tensorflow_Image
 }
 
 main
+
