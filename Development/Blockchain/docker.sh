@@ -1,4 +1,7 @@
 #!/bin/bash
+set -e
+set -x 
+
 function Docker_Install {
   echo 'Installing Docker'
   sudo apt-get update 

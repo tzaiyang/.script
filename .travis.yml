@@ -1,6 +1,7 @@
 language: shell
 install: true
 script: 
+Development/Blockchain/docker.sh
 # - App/Wubi_InputMethod_Install.sh
 # - App/StarDict_Install.sh
 # - App/Over_GFW_In_SS_Server.sh
