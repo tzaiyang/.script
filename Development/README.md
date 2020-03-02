@@ -32,7 +32,10 @@ The tr utility copies the standard input to the standard output with substitutio
 
 ## Input/Output  
 tee  
-The tee utility copies standard input to standard output, making a copy in zero or more files.  The output is unbuffered.    
+Read from standard input and write to standard output and files (or commands).  
 
 tree   
 list contents of directories in a tree-like format.
+
+ab  
+Apache HTTP server benchmarking tool
